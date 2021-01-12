@@ -1,0 +1,4 @@
+html, body {
+	height:100%;
+	background:radial-gradient(ellipse farthest-corner at top, skyblue ,darkblue);
+}
