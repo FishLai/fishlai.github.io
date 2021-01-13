@@ -1,0 +1,14 @@
+main, section {
+	height:100%;
+}
+
+.info-card {
+	margin:auto;
+	position:relative;
+	top:calc(50% - 400px);
+	height:800px;
+	width:450px;
+	border:2px solid rgba(20, 144, 255, 0.1);
+	border-radius:80% 30%/10% 50%;
+	box-shadow:10px 40px 38px darkblue;
+}
