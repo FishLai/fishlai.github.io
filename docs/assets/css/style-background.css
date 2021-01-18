@@ -1,4 +1,18 @@
 html, body {
 	height:100%;
-	background:radial-gradient(ellipse farthest-corner at top, skyblue ,darkblue);
+	background:radial-gradient(ellipse farthest-corner at 10vw 10vh, springgreen, midnightblue);
+	background-size:200% 200%;
+	animation: bggradient 15s ease infinite;
+}
+
+@keyframes bggradient {
+	0% {
+		background-position: 10% 10%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 10% 10%;
+	}
 }
