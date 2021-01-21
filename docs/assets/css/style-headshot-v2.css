@@ -14,7 +14,7 @@ div.container {
 @media only screen and (orientation:portrait) {
 	div.container::after {
 		content: "";
-		background: url('../../../fishlai.github.io/docs/assets/img/headshot-h600-d72.png');
+		background: url('https://fishlai.github.io/docs/assets/img/headshot-h600-d72.png');
 		background-size: auto 100%;
 		opacity:0.3;
 		top:0;
@@ -29,7 +29,7 @@ div.container {
 @media only screen and (orientation: landscape) {
 	div.container::after {
 		content: "";
-		background: url('../../../fishlai.github.io/docs/assets/img/headshot-h600-d72.png');
+		background: url('https://fishlai.github.io/docs/assets/img/headshot-h600-d72.png');
 		background-size: auto 100%;
 		background-repeat: no-repeat;
 		background-position:right;
