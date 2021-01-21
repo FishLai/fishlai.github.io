@@ -1,0 +1,44 @@
+main {
+	height:100%;
+}
+
+div.content {
+	position: relative;
+	height:100%;
+
+}
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (orientation:portrait) {
+	div.content::after {
+		content: "";
+		background: url('../img/headshot-h600-d72.png');
+		background-size: auto 100%;
+		opacity:0.3;
+		top:0;
+		left:0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+	}
+}
+
+@media only screen and (orientation: landscape) {
+	div.content::after {
+		content: "";
+		background: url('../img/headshot-h600-d72.png');
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position:right;
+		opacity:0.7;
+		top:0;
+		left:0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+	}
+}
