@@ -2,7 +2,7 @@ main {
 	height:100%;
 }
 
-div.content {
+div.container {
 	position: relative;
 	height:100%;
 
@@ -12,9 +12,9 @@ div.content {
 }
 
 @media only screen and (orientation:portrait) {
-	div.content::after {
+	div.container::after {
 		content: "";
-		background: url('https://fishlai.github.io/docs/assets/img/headshot-h600-d72.png');
+		background: url('../../../fishlai.github.io/docs/assets/img/headshot-h600-d72.png');
 		background-size: auto 100%;
 		opacity:0.3;
 		top:0;
@@ -22,14 +22,14 @@ div.content {
 		bottom: 0;
 		right: 0;
 		position: absolute;
-		z-index: 0;
+		z-index: -1;
 	}
 }
 
 @media only screen and (orientation: landscape) {
-	div.content::after {
+	div.container::after {
 		content: "";
-		background: url('https://fishlai.github.io/docs/assets/img/headshot-h600-d72.png');
+		background: url('../../../fishlai.github.io/docs/assets/img/headshot-h600-d72.png');
 		background-size: auto 100%;
 		background-repeat: no-repeat;
 		background-position:right;
@@ -39,6 +39,6 @@ div.content {
 		bottom: 0;
 		right: 0;
 		position: absolute;
-		z-index: 0;
+		z-index: -1;
 	}
 }
