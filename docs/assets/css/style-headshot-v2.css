@@ -14,7 +14,7 @@ div.content {
 @media only screen and (orientation:portrait) {
 	div.content::after {
 		content: "";
-		background: url('../img/headshot-h600-d72.png');
+		background: url('/docs/assets/img/headshot-h600-d72.png');
 		background-size: auto 100%;
 		opacity:0.3;
 		top:0;
@@ -29,7 +29,7 @@ div.content {
 @media only screen and (orientation: landscape) {
 	div.content::after {
 		content: "";
-		background: url('../img/headshot-h600-d72.png');
+		background: url('/docs/assets/img/headshot-h600-d72.png');
 		background-size: auto 100%;
 		background-repeat: no-repeat;
 		background-position:right;
