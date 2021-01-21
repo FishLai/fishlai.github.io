@@ -3,6 +3,7 @@
 	color: khaki;
 	text-shadow: 0.2em 0.2em 0.3em darkblue;
 	padding-left:1rem;
+	font-size: 14px;
 }	
 @media only screen and (orientation:portrait) {
 	.brief-intro {
