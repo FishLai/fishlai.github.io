@@ -1,17 +1,12 @@
-p {
-	margin: 0;
-}
-
 .brief-intro {
 	font-family:'Hachi Maru Pop', 'Potta One', cursive;
 	color: khaki;
 	text-shadow: 0.2em 0.2em 0.3em darkblue;
 	padding-left:5%;
-	font-size: 14px;
 }
 @media only screen and (orientation:portrait) {
 	.brief-intro {
-		font-size: 14px;
+		font-size: 0.875rem;
 		position: relative;
 		top: 22.535%;
 	}
@@ -19,7 +14,7 @@ p {
 
 @media only screen and (orientation:landscape) {
 	.brief-intro {
-		font-size: 16px;
+		font-size: 0.875rem;
 		position: relative;
 		top: 12.535%;
 	}
