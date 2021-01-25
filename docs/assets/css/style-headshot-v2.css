@@ -3,9 +3,6 @@ div.container {
 	height:100%;
 
 }
-@media only screen and (min-width: 480px) {
-
-}
 
 @media only screen and (orientation:portrait) {
 	div.container::after {
@@ -18,7 +15,13 @@ div.container {
 		bottom: 0;
 		right: 0;
 		position: absolute;
-		z-index: 0;
+		z-index: -1;
+	}
+}
+@media only screen and (orientation:portrait) and (min-width:600px) {
+	div.container::after {
+		content: "";
+		background: none;
 	}
 }
 
@@ -35,6 +38,12 @@ div.container {
 		bottom: 0;
 		right: 0;
 		position: absolute;
-		z-index: 0;
+		z-index: -1;
 	}
+}
+@media only screen and (orientation: landscape) and (min-height: 600px) {
+	div.container::after {
+		content:"";
+		background:none;
+	}	
 }

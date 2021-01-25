@@ -3,22 +3,37 @@
 	color: khaki;
 	text-shadow: 0.2em 0.2em 0.3em darkblue;
 	padding-left:5%;
+	font-size:4.375vw;
 }
+
+
+
 @media only screen and (orientation:portrait) {
 	.brief-intro {
-		font-size: 0.875rem;
+		font-size: 4.375vw;
 		position: relative;
 		top: 22.535%;
+	}
+}
+@media only screen and (orientation:portrait) and (min-width: 500px) {
+	.brief-intro {
+		font-size:1.36rem;
 	}
 }
 
 @media only screen and (orientation:landscape) {
 	.brief-intro {
-		font-size: 0.875rem;
+		font-size: 4.375vh;
 		position: relative;
 		top: 12.535%;
 	}
 }
+@media only screen and (orientation:landscape) and (min-height: 500px) {
+	.brief-intro {
+		font-size: 1.36rem;
+	}
+}
+
 
 .blink-cursor {
 	border-width: 0 7px 0 0;
