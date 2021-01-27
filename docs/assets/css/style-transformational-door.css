@@ -1,0 +1,55 @@
+.door-border {
+	border-style:ridge;
+	border-width:15px 15px 0 15px;
+	transform: scale(.8);
+	height:100%;
+	width:100%;
+	top:-15px;
+	left:-15px;
+	position: absolute;
+}
+.door-handle-box {
+	position: absolute;
+	left: 70%;
+	top:50%;
+	width: 60px;
+	height: 60px;
+	transform: rotate(180deg);
+}
+
+.go-to-resume {
+	animation: opendoor ease-in-out forwards 4s;
+}
+
+@keyframes opendoor {
+	0% {}
+
+	40% {
+		transform: rotate(180deg) scale(0.8) matrix(1, 0, 0, 1, 0, 10);
+	}
+
+	50% {
+		transform: rotate(180deg) scale(0.8) matrix(1, 0.09, 0, 1, 0, 25) rotateY(10deg);
+	}
+
+	70% {
+		transform: rotate(180deg) scale(0.8) matrix(1, 0.15, 0, 1, -30, 30) rotateY(30deg);
+	}
+
+	100% {
+		transform: rotate(180deg) scale(0.8) matrix(1, 0.3, 0, 1, -80, 35) rotateY(60deg);
+	}
+}
+
+@keyframes walkin {
+	0% {
+		transform-origin: 50% 50%;
+		transform:scale(1.1);
+	}
+
+	100% {
+		transform-origin: 30% 20%;
+		transform:scale(2.5);
+	}
+}
+

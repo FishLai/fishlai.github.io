@@ -16,6 +16,11 @@
    id="svg8"
    inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
    sodipodi:docname="door_handle.svg">
+  <style type="text/css">
+    #layer1 {
+      cursor:grab;
+    }
+  </style>
   <defs
      id="defs2">
     <inkscape:perspective
@@ -115,7 +120,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     >
     <g
        id="g2933"
        transform="translate(-5,-17.66391)">
@@ -207,4 +213,6 @@
          r="7.5" />
     </g>
   </g>
+    <animateTransform id="open" dur=".8s" begin="layer1.click+1.6s" attributeName="transform" type="rotate" from="0 35.035 51.428093" to="45 35.035 51.428093" fill="freeze" xlink:href="#handle"/>
+    <animateTransform dur="2s" begin="open.end+0.5s" attributeName="transform" type="rotate" from="40 35.035 51.428093" to="0 35.035 51.428093" fill="freeze" xlink:href="#handle" />
 </svg>
