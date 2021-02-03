@@ -1,0 +1,11 @@
+main {
+	overflow: hidden;
+}
+
+#svgContainer {
+	display: block;
+	transition: opacity 1s ease-in;
+	height: 200vh;
+	width: 100%;
+	opacity:0;
+}
