@@ -110,7 +110,7 @@ class raiseFootAnimate {
 
 		if(move_len <= this.mp_len) {
 			window.requestAnimationFrame((speed)=>this.raiseFootR(speed));
-			this.move_len += this.mp_len*0.1;
+			this.move_len += this.mp_len*0.05;
 		} else {
 			await upStairs(this.speed);
 			await this.r_leg.transition()
@@ -137,7 +137,7 @@ class raiseFootAnimate {
 
 		if(move_len <= this.mp_len) {
 			window.requestAnimationFrame((speed)=>this.raiseFootL(speed));
-			this.move_len += this.mp_len*0.1;
+			this.move_len += this.mp_len*0.05;
 		} else {
 			await upStairs(this.speed);
 			await this.l_leg.transition()
@@ -154,5 +154,5 @@ class raiseFootAnimate {
 
 }
 
-var test = new raiseFootAnimate();
-test.raiseFootR(test.speed = 750);
+var walkUp = new raiseFootAnimate();
+walkUp.raiseFootR(walkUp.speed = 750);

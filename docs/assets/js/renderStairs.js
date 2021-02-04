@@ -112,9 +112,12 @@ function renderStairs() {
 		.attr('width', '100%')
 		.attr('height', '50vh')
 		.attr('id', 'bg_svg')
-		.style('position', 'sticky')
+		.style('position', 'relative')
 		.style('overflow', 'visible')
-		.style('top', '50vh');
+		.style('top', '-50vh')
+		.style('opacity', "0.7")
+		.style('z-index', "0");
+
 	//append group tag, g 
 	let svg_g = svg.append('g');
 	svg_g.attr('id', 'stairs');
