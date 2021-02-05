@@ -3,7 +3,8 @@ walkUpStair();
 function walkUpStair() {
 	//create motional path object group
 	var g_mp = d3.select('svg').append('g')
-								.attr('id', 'motional_path');
+								.attr('id', 'motional_path')
+								.style('display', 'none');
 	//create motional path of right/left legs
 	var mp_r = g_mp.append('path').attr('id', 'mp_r');
 	var mp_l = g_mp.append('path').attr('id', 'mp_l');
@@ -94,7 +95,7 @@ class raiseFootAnimate {
 		this.line = d3.line().x(d => d.x).y(d => d.y);
 		this.move_len = 0;
 		this.speed = 700;
-		this.infinite = true;
+		this.infinite = false;
 	}
 
 	async raiseFootR(speed) {
@@ -155,4 +156,4 @@ class raiseFootAnimate {
 }
 
 var walkUp = new raiseFootAnimate();
-walkUp.raiseFootR(walkUp.speed = 750);
+//walkUp.raiseFootR(walkUp.speed = 750);

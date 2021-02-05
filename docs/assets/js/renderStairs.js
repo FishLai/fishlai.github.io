@@ -114,7 +114,7 @@ function renderStairs() {
 		.attr('id', 'bg_svg')
 		.style('position', 'relative')
 		.style('overflow', 'visible')
-		.style('top', '-50vh')
+		.style('top', '-30vh')
 		.style('opacity', "0.7")
 		.style('z-index', "0");
 
