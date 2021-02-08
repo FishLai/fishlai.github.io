@@ -1,10 +1,10 @@
 
 renderStairs();
 
-
 function generateCorners() {
 	//would like to let step fit device width
-	let deviceWidth = document.documentElement.clientWidth;
+	//let deviceWidth = document.documentElement.clientWidth;
+	let deviceWidth = document.getElementById('bg_svg').width.baseVal.value;
 	let svgHeight = document.documentElement.clientHeight/2;
 	let param_designStep = {
 		'frontHeight': 50,
@@ -108,15 +108,7 @@ function renderStairs() {
 	let pathData = generateCorners();
 
 	//append the backgound svg
-	let svg = d3.select('section#svgContainer').append('svg')
-		.attr('width', '100%')
-		.attr('height', '50vh')
-		.attr('id', 'bg_svg')
-		.style('position', 'relative')
-		.style('overflow', 'visible')
-		.style('top', '-30vh')
-		.style('opacity', "0.7")
-		.style('z-index', "0");
+	let svg = d3.select('#bg_svg');
 
 	//append group tag, g 
 	let svg_g = svg.append('g');

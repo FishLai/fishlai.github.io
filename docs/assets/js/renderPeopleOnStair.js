@@ -4,7 +4,7 @@ renderPerson();
 // initial step paraem 50 520 dy35 dx25 480
 function renderPerson() {
 	//calc ratio real/design
-	var stair_width = document.documentElement.clientWidth + 50;
+	var stair_width = document.getElementById('bg_svg').width.baseVal.value + 50;
 	var ratio_design = stair_width/520;
 
 	//calc length for (d3)getPointAtLength();
@@ -18,7 +18,7 @@ function renderPerson() {
 	var g_p = svg.append('g').attr('id', 'person');
 	
 	//calc person height base on stair height
-	var person_height = 17*10*2*(document.documentElement.clientWidth/320);
+	var person_height = (170*(50/20))*ratio_design;
 
 	//decide offset point from getPointAtLength()
 	var offset_onStep = {dx: 10, dy: -10}

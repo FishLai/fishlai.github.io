@@ -1,55 +1,122 @@
-.door-border {
-	border-style:ridge;
-	border-width:15px 15px 0 15px;
-	transform: scale(.8);
+#doorContainer {
+	position:relative;
 	height:100%;
-	width:100%;
-	top:-15px;
-	left:-15px;
-	position: absolute;
+	transition: transform 1s linear;
 }
+
+.door-border {
+	border-width: 15px;
+	border-style:ridge;
+	border-bottom: transparent;
+	overflow:hidden;
+	background-color:hsl(0, 30%, 90%);
+	transform: scale(0.8);
+
+}
+@media only screen and (orientation: landscape) {
+	/*add the vh/vw ratio as css var h_w*/
+	.door-border {
+		border-bottom: unset;
+		border-width: 10px;
+		border-style:ridge;
+		border-left:transparent;
+		overflow:hidden;
+		background-color: hsl(0, 30%, 90%);
+		transform: rotate(-90deg) scale(calc(var(--h_w)*0.8));
+	}
+}
+
 .door-handle-box {
 	position: absolute;
 	left: 70%;
 	top:50%;
 	width: 60px;
 	height: 60px;
-	transform: rotate(180deg);
 }
-
+@media only screen and (orientation: landscape) {
+	.door-handle-box {
+		position:absolute;
+		top:70%;
+		left:40%;
+		transform: rotate(90deg);
+	}
+}
+/*
 .go-to-resume {
 	animation: opendoor ease-in-out forwards 4s;
-}
+}*/
 
 @keyframes opendoor {
-	0% {}
-
-	40% {
-		transform: rotate(180deg) scale(0.8) matrix(1, 0, 0, 1, 0, 10);
+	0% {
+		box-sizing: border-box;
+		border-bottom: 7px solid hsl(0, 30%, 90%);
+		
+		transform-origin: left;
 	}
 
 	50% {
-		transform: rotate(180deg) scale(0.8) matrix(1, 0.09, 0, 1, 0, 25) rotateY(10deg);
-	}
-
-	70% {
-		transform: rotate(180deg) scale(0.8) matrix(1, 0.15, 0, 1, -30, 30) rotateY(30deg);
+		box-sizing: border-box;
+		border-bottom: 7px solid hsl(0, 30%, 90%);
+		transform-origin: left;
+		transform:perspective(0px) matrix(1, 0, 0, 1, 0, 0) rotateY(0deg);	
 	}
 
 	100% {
-		transform: rotate(180deg) scale(0.8) matrix(1, 0.3, 0, 1, -80, 35) rotateY(60deg);
+		box-sizing: border-box;
+		transform-origin: left;
+		transform:perspective(4000px) matrix(1, -0.3, 0, 1, 0, 0) rotateY(75deg);
+		border-bottom: 7px solid hsl(0, 30%, 90%);
+	}
+}
+@media only screen and (orientation: landscape) {
+	@keyframes opendoor {
+		0% {
+			box-sizing: border-box;
+			border-left: 7px solid hsl(0, 30%, 90%);
+			
+			transform-origin: top;
+		}
+
+		50% {
+			box-sizing: border-box;
+			border-left: 7px solid hsl(0, 30%, 90%);
+			transform-origin: top;
+			transform:perspective(0px) matrix(1, 0, 0, 1, 0, 0) rotateX(0deg);	
+		}
+
+		100% {
+			box-sizing: border-box;
+			transform-origin: top;
+			transform: matrix(1, 0, 0.7, 1, 0, 0) rotateX(75deg);
+			border-left: 7px solid hsl(0, 30%, 90%);
+		}
 	}
 }
 
 @keyframes walkin {
 	0% {
 		transform-origin: 50% 50%;
-		transform:scale(1.1);
+	}
+	60% {
+		transform-origin: 40% 35%;
+		transform:scale(1.5);
 	}
 
 	100% {
 		transform-origin: 30% 20%;
-		transform:scale(2.5);
+		transform:scale(2);
 	}
 }
-
+@media only screen and (orientation: landscape) {
+	@keyframes walkin {
+		0% {}
+		
+		60% {
+			transform: rotate(-90deg) scale(calc(var(--h_w)*0.8*2.5));
+		}
+		
+		100% {
+			transform: rotate(-90deg) scale(calc(var(--h_w)*0.8*4));
+		}
+	}
+}

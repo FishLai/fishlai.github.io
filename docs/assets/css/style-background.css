@@ -2,7 +2,7 @@ div.container {
 	background:radial-gradient(ellipse farthest-corner at 10vw 10vh, springgreen, midnightblue);
 	background-size:200% 200%;
 	animation: bggradient 15s ease infinite;
-	z-index:0;
+	z-index:5;
 }
 
 @keyframes bggradient {

@@ -35,7 +35,7 @@ function walkUpStair() {
 					.curve(d3.curveNatural);
 
 	//right/left foot motional position
-	var offset_x = 20*(document.documentElement.clientWidth/320);
+	var offset_x = 20*(document.getElementById('bg_svg').width.baseVal.value/320);
 	var data_r_mp = [
 		param_r_leg.pos_r_foot,
 		{
