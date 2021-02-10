@@ -1,4 +1,4 @@
-walkUpStair();
+//walkUpStair();
 
 function walkUpStair() {
 	//create motional path object group
@@ -155,5 +155,5 @@ class raiseFootAnimate {
 
 }
 
-var walkUp = new raiseFootAnimate();
+//var walkUp = new raiseFootAnimate();
 //walkUp.raiseFootR(walkUp.speed = 750);

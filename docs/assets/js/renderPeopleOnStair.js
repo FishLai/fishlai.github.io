@@ -1,5 +1,5 @@
 
-renderPerson();
+//renderPerson();
 
 // initial step paraem 50 520 dy35 dx25 480
 function renderPerson() {

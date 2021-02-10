@@ -1,5 +1,5 @@
 
-renderStairs();
+//renderStairs();
 
 function generateCorners() {
 	//would like to let step fit device width
